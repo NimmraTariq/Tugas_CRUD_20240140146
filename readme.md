@@ -157,10 +157,14 @@ screenshots/
 
 Example:
 
-screenshots/db.png 
-screenshots/api.png  
-screenshots/web.png  
-screenshots/project.png
+<img width="1181" height="1033" alt="db" src="https://github.com/user-attachments/assets/73567159-8316-48c8-b75d-f46be3966d2a" />
+
+<img width="1652" height="998" alt="api" src="https://github.com/user-attachments/assets/b89515ac-3d09-4a2c-9e56-6a3068af5dcd" />
+
+<img width="1919" height="1034" alt="web" src="https://github.com/user-attachments/assets/4e4f99c7-a770-4877-8eae-492afc83e687" />
+
+<img width="1254" height="969" alt="project" src="https://github.com/user-attachments/assets/c99b78f8-fd4d-43fc-b980-b1efb0d71d9a" />
+
 
 
 ## Repository
