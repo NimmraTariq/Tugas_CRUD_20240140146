@@ -138,15 +138,17 @@ http://localhost:8080/index.html
 ## How to Run
 
 1. Start MySQL
-2. Create database named:
+2. Run the Spring Boot project:
 
-spring
+```powershell
+.\mvnw spring-boot:run
+```
 
-3. Run Spring Boot project
-
-4. Open browser:
+3. Open browser:
 
 http://localhost:8080/index.html
+
+4. If you want MySQL instead of the embedded H2 database, activate the `mysql` profile and create the `spring` schema.
 
 
 ## Screenshots
