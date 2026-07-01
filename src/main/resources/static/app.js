@@ -118,7 +118,7 @@ async function editData(id) {
             editingId = id;
             document.getElementById('formTitle').textContent = 'Edit Data Penduduk';
             document.getElementById('btnText').textContent = 'Update Data';
-            document.getElementById('btnIcon').textContent = '↻';
+            document.getElementById('btnIcon').textContent = 'U';
 
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
