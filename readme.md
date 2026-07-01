@@ -1,4 +1,4 @@
-# Tugas CRUD KTP - 20240140253
+# Tugas CRUD KTP - 20240140146
 
 ## Description
 
@@ -157,7 +157,7 @@ screenshots/
 
 Example:
 
-screenshots/db.png  
+screenshots/db.png 
 screenshots/api.png  
 screenshots/web.png  
 screenshots/project.png
@@ -167,8 +167,7 @@ screenshots/project.png
 
 Repository name:
 
-Tugas_CRUD_20240140253
-
+Tugas_CRUD_20240140146
 Minimum commits: 10
 
 
