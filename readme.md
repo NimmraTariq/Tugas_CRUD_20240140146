@@ -1,60 +1,60 @@
-# Tugas CRUD KTP - 20240140253
+# Aplikasi CRUD Data Penduduk - 20240140146
 
-## Description
+## Deskripsi
 
-This project is a CRUD (Create, Read, Update, Delete) application for KTP data using Spring Boot as the server-side API and MySQL as the database.  
-The client-side is built using HTML, CSS, JavaScript, and Ajax to interact with the API without refreshing the page.
+Aplikasi CRUD (Create, Read, Update, Delete) untuk mengelola data penduduk menggunakan Spring Boot sebagai backend API dan MySQL sebagai database.
+Frontend dibangun menggunakan HTML, CSS, JavaScript modern dengan Axios untuk berkomunikasi dengan API tanpa perlu refresh halaman.
 
-The application supports:
+Fitur utama:
 
-- Add KTP data
-- View KTP data
-- Update KTP data
-- Delete KTP data
+- Menambah data penduduk
+- Melihat semua data penduduk
+- Mengubah data penduduk
+- Menghapus data penduduk
 
 
 ## Database
 
-Schema name:
+Nama schema:
 spring
 
-Table name:
-ktp
+Nama tabel:
+citizen
 
-Table structure:
+Struktur tabel:
 
 id (int, primary key, auto increment)
-nomor_ktp (varchar, unique)
-nama_lengkap (varchar)
+nik (varchar, unique)
+nama (varchar)
 alamat (varchar)
-tanggal_lahir (date)
+tgl_lahir (date)
 jenis_kelamin (varchar)
 
 SQL:
 
-CREATE TABLE ktp (
+CREATE TABLE citizen (
 id INT AUTO_INCREMENT PRIMARY KEY,
-nomor_ktp VARCHAR(50) UNIQUE,
-nama_lengkap VARCHAR(100),
+nik VARCHAR(50) UNIQUE,
+nama VARCHAR(100),
 alamat VARCHAR(255),
-tanggal_lahir DATE,
+tgl_lahir DATE,
 jenis_kelamin VARCHAR(20)
 );
 
 
-## Technologies Used
+## Teknologi yang Digunakan
 
-Server side:
+Backend:
 - Java
 - Spring Boot
 - Spring Data JPA
 - MySQL
 
-Client side:
-- HTML
-- CSS
-- JavaScript
-- Ajax / Fetch API
+Frontend:
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- Axios
 
 Tools:
 - IntelliJ IDEA
@@ -63,99 +63,97 @@ Tools:
 - GitHub
 
 
-## Package Structure
+## Struktur Package
 
-entity  
+model  
 repository  
 service  
 service.impl  
 controller  
 dto  
 mapper  
-util
+
+Keterangan:
+
+model = representasi tabel database  
+repository = akses data ke database  
+service = logika bisnis  
+impl = implementasi service  
+controller = REST API endpoint  
+dto = objek transfer data  
+mapper = konversi antar entity dan dto  
 
 
-Description:
+## Endpoint API
 
-entity = database model  
-repository = database access  
-service = business logic  
-impl = service implementation  
-controller = REST API  
-dto = data transfer object  
-mapper = convert entity to dto  
-util = helper classes
+POST /api/citizen  
+Menambah data baru
 
+GET /api/citizen  
+Mendapatkan semua data
 
-## API Endpoints
+GET /api/citizen/{id}  
+Mendapatkan data berdasarkan id
 
-POST /ktp  
-Create new data
+PUT /api/citizen/{id}  
+Mengubah data
 
-GET /ktp  
-Get all data
-
-GET /ktp/{id}  
-Get data by id
-
-PUT /ktp/{id}  
-Update data
-
-DELETE /ktp/{id}  
-Delete data
+DELETE /api/citizen/{id}  
+Menghapus data
 
 
-Example JSON:
+Contoh JSON:
 
 {
-"nomorKtp": "1234",
-"namaLengkap": "Saz",
-"alamat": "Dhaka",
-"tanggalLahir": "2000-01-01",
-"jenisKelamin": "L"
+"nik": "3201234567890001",
+"nama": "Nimra Tariq",
+"alamat": "Jl. Sudirman No. 123",
+"tglLahir": "2003-05-15",
+"jenisKelamin": "P"
 }
 
 
 ## Client Side
 
-Frontend file:
+File frontend:
 
 src/main/resources/static/index.html
 
-Features:
+Fitur:
 
-- Add data
-- Edit data
-- Delete data
-- Show table
-- Ajax without refresh
+- Form input data penduduk
+- Tabel data dengan pagination
+- Edit data langsung di modal
+- Delete dengan konfirmasi
+- Notifikasi feedback
+- AJAX tanpa refresh
 
-Open in browser:
+Buka di browser:
 
-http://localhost:8080/index.html
+http://localhost:8080/
 
 
-## How to Run
+## Cara Menjalankan
 
-1. Start MySQL
-2. Create database named:
+1. Pastikan MySQL sudah berjalan
+2. Buat database dengan nama:
 
 spring
 
-3. Run Spring Boot project
+3. Jalankan project Spring Boot
 
-4. Open browser:
+4. Buka browser:
 
-http://localhost:8080/index.html
+http://localhost:8080/
 
 
-## Screenshots
+## Screenshot
 
-Put screenshots in folder:
+Letakkan screenshot di folder:
 
 screenshots/
 
-Example:
+Contoh:
 
 screenshots/db.png  
 screenshots/api.png  
@@ -165,13 +163,13 @@ screenshots/project.png
 
 ## Repository
 
-Repository name:
+Nama repository:
 
-Tugas_CRUD_20240140253
+Tugas_CRUD_20240140146
 
-Minimum commits: 10
+Minimum commit: 10
 
 
 ## Status
 
-All CRUD operations work correctly on API and client-side.
+Semua operasi CRUD berfungsi dengan baik pada API dan frontend.
